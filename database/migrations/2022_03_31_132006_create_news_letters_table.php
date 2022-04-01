@@ -14,17 +14,16 @@ return new class extends Migration {
     {
         Schema::create('news_letters', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('author');
-            $table->text('link');
-            $table->text('excerpt');
-            $table->text('summary');
-            $table->integer('rank');
-            $table->string('topic');
-            $table->string('country');
-            $table->string('language');
-            $table->text('media');
-            $table->integer('_id')->unique();
+            $table->text('title')->nullable();
+            $table->string('author')->nullable();
+            $table->text('link')->nullable();
+            $table->text('excerpt')->nullable();
+            $table->text('summary')->nullable();
+            $table->integer('rank')->nullable();
+            $table->string('topic')->nullable();
+            $table->string('country')->nullable();
+            $table->string('language')->nullable();
+            $table->text('media')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
