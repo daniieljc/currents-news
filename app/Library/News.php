@@ -34,6 +34,10 @@ class News
         }
     }
 
+    public function importNewsWar(){
+        $news = $this->loadNewsBySearch();
+    }
+
     public function loadNews()
     {
         $raw_response = $this->guzzle->get("v2/latest_headlines?lang=es&page_size=100&when=24h", ['headers' => ['x-api-key' => env('NEWS_APIKEY')],]);
