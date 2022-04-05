@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->text('excerpt')->nullable();
             $table->text('summary')->nullable();
             $table->integer('rank')->nullable();
-            $table->string('topic')->nullable();
+            $table->foreignId('news_topic_id')->constrained();
             $table->string('country')->nullable();
             $table->string('language')->nullable();
             $table->text('media')->nullable();

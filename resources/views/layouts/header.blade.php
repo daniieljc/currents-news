@@ -5,7 +5,7 @@
             <!-- Site branding -->
             <div class="flex-shrink-0 mr-5">
                 <!-- Logo -->
-                <a class="block" href="index.html" aria-label="Cruip">
+                <a class="block" href="{{route('home')}}" aria-label="Cruip">
                     <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="logo_a">
@@ -30,7 +30,7 @@
                 <ul class="flex flex-grow flex-wrap items-center font-medium">
                     <li>
                         <a class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                           href="about.html">Noticias</a>
+                           href="/">Noticias</a>
                     </li>
                 </ul>
 
@@ -58,7 +58,8 @@
                 <!-- Desktop CTA on the right -->
                 <ul class="flex justify-end flex-wrap items-center">
                     <li>
-                        <button class="btn-sm text-white bg-teal-500 ml-6 disabled:opacity-50" disabled>Donaciones</button>
+                        <button class="btn-sm text-white bg-teal-500 ml-6 disabled:opacity-50" disabled>Donaciones
+                        </button>
                     </li>
                 </ul>
 

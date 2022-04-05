@@ -27,11 +27,9 @@
     </section>
 
     <section class="relative border-t border-transparent dark:border-gray-800">
-        <!-- Background gradient (dark version only) -->
         <div
             class="absolute inset-0 opacity-25 bg-gradient-to-b from-gray-800 to-gray-900 pointer-events-none hidden dark:block"
             aria-hidden="true"></div>
-        <!-- End background gradient (dark version only) -->
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="py-12">
                 <div data-aos="fade-up" data-aos-delay="450">

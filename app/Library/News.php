@@ -32,7 +32,7 @@ class News
                 'excerpt' => $article->excerpt,
                 'summary' => $article->summary,
                 'rank' => $article->rank,
-                'topic' => $topic->id,
+                'news_topic_id' => $topic->id,
                 'country' => $article->country,
                 'language' => $article->language,
                 'media' => $article->media,

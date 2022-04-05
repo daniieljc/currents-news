@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, '_invoke'])->name('home');
+Route::get('topic/{id}', [\App\Http\Controllers\HomeController::class, 'topic'])->name('topic');
 
 require __DIR__ . '/auth.php';
