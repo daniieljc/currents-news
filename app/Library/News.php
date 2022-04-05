@@ -3,6 +3,7 @@
 namespace App\Library;
 
 use App\Models\NewsLetter;
+use App\Models\NewsTopic;
 use GuzzleHttp\Client;
 
 class News
@@ -18,6 +19,12 @@ class News
     {
         $news = $this->loadNews();
         foreach ($news->articles as $article) {
+            $topic = NewsTopic::where('title', $article->topic)->first();
+            if ($topic == null) {
+                $topic = NewsTopic::create([
+                    'title' => $article->topic
+                ]);
+            }
             NewsLetter::upsert([
                 'title' => $article->title,
                 'author' => $article->author,
@@ -25,7 +32,7 @@ class News
                 'excerpt' => $article->excerpt,
                 'summary' => $article->summary,
                 'rank' => $article->rank,
-                'topic' => $article->topic,
+                'topic' => $topic->id,
                 'country' => $article->country,
                 'language' => $article->language,
                 'media' => $article->media,
@@ -34,7 +41,8 @@ class News
         }
     }
 
-    public function importNewsWar(){
+    public function importNewsWar()
+    {
         $news = $this->loadNewsBySearch();
     }
 
