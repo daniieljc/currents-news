@@ -10,12 +10,9 @@
                             <div class="flex flex-wrap justify-center -m-1">
                                 @foreach($topics as $topic)
                                     <a href="{{route('topic', $topic->id)}}"
-                                        class="font-medium px-4 py-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 shadow transition duration-150 ease-in-out rounded-full inline-flex items-center justify-center m-1"
-                                        :class="{ 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25': category === '1' }"
-                                        @click="category = '1'"
-                                    >
-                                    <span class="transition duration-150 ease-in-out"
-                                          :class="category === '1' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'">{{ucfirst($topic->title)}}</span>
+                                       class="font-medium px-4 py-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 shadow transition duration-150 ease-in-out rounded-full inline-flex items-center justify-center m-1">
+                                        <span
+                                            class="transition duration-150 ease-in-out">{{ucfirst($topic->title)}}</span>
                                     </a>
                                 @endforeach
                             </div>

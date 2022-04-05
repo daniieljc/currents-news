@@ -21,7 +21,15 @@ class HomeController extends Controller
     {
         $topics = NewsTopic::all();
         $now = Carbon::now();
-        $news = NewsLetter::where('')->whereDay('created_at', $now->format('d'))->whereYear('created_at', $now->format('Y'))->whereMonth('created_at', $now->format('m'))->get();
-        return view('topic')->with('news', $news)->with('topics', $topics);
+        $news = NewsLetter::where('news_topic_id', $id)->whereDay('created_at', $now->format('d'))->whereYear('created_at', $now->format('Y'))->whereMonth('created_at', $now->format('m'))->get();
+        return view('topic')->with('news', $news)->with('topics', $topics)->with('topicid', $id);
+    }
+
+    public function news($id)
+    {
+        $topics = NewsTopic::all();
+        $now = Carbon::now();
+        $news = NewsLetter::where('news_topic_id', $id)->whereDay('created_at', $now->format('d'))->whereYear('created_at', $now->format('Y'))->whereMonth('created_at', $now->format('m'))->get();
+        return view('show')->with('news', $news)->with('topics', $topics)->with('topicid', $id);
     }
 }
