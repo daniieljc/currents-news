@@ -21,7 +21,6 @@ return new class extends Migration {
             $table->text('summary')->nullable();
             $table->integer('rank')->nullable();
             $table->foreignId('news_topic_id')->constrained();
-            $table->string('query')->nullable();
             $table->string('country')->nullable();
             $table->string('language')->nullable();
             $table->text('media')->nullable();

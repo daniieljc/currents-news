@@ -46,10 +46,10 @@ class News
     {
         $news = $this->loadNewsBySearch($query, Carbon::now()->format('Y-m-d'));
         foreach ($news->articles as $article) {
-            $topic = NewsTopic::where('title', $article->topic)->first();
+            $topic = NewsTopic::where('title', $article->topic)->orWhere('title', $query)->first();
             if ($topic == null) {
-                $topic = NewsTopic::create([
-                    'title' => $article->topic
+                $topicNew = NewsTopic::create([
+                    'title' => $topic == null ? $query : $article->topic
                 ]);
             }
             NewsLetter::upsert([
@@ -59,8 +59,7 @@ class News
                 'excerpt' => $article->excerpt,
                 'summary' => nl2br(htmlentities($article->summary)),
                 'rank' => $article->rank,
-                'news_topic_id' => $topic->id,
-                'query' => $query,
+                'news_topic_id' => $topicNew->id,
                 'country' => $article->country,
                 'language' => $article->language,
                 'media' => $article->media,
