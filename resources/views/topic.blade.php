@@ -59,6 +59,8 @@
                                             <a class="font-medium text-gray-800 dark:text-gray-400 hover:underline"
                                                target="_blank"
                                                href="{{$new->link}}">{{$new->author}}</a>
+                                            <span
+                                                class="text-gray-600 dark:text-gray-400"> · {{ucfirst(\Carbon\Carbon::parse($new->created_at)->diffForHumans())}}</span>
                                         </div>
                                     </footer>
                                 </div>

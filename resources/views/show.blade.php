@@ -22,7 +22,7 @@
                                     <div>
                                         <span class="text-gray-600 dark:text-gray-400">Escrito por </span>
                                         <a class="font-medium text-gray-800 dark:text-gray-300 hover:underline"
-                                           href="#0">{{$news->author}}</a>
+                                           href="{{$news->link}}">{{$news->author}}</a>
                                         <span
                                             class="text-gray-600 dark:text-gray-400"> · {{ucfirst(\Carbon\Carbon::parse($news->created_at)->diffForHumans())}}</span>
                                     </div>
