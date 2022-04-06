@@ -38,7 +38,7 @@ class News
                 'language' => $article->language,
                 'media' => $article->media,
                 'created_at' => $article->published_date,
-            ], ['_id']);
+            ], ['title']);
         }
     }
 
@@ -65,7 +65,7 @@ class News
                 'language' => $article->language,
                 'media' => $article->media,
                 'created_at' => $article->published_date,
-            ], ['_id']);
+            ], ['title']);
         }
     }
 
