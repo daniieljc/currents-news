@@ -4,6 +4,7 @@ namespace App\Library;
 
 use App\Models\NewsLetter;
 use App\Models\NewsTopic;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 
 class News
@@ -41,9 +42,31 @@ class News
         }
     }
 
-    public function importNewsWar()
+    public function importNewsWar($query)
     {
-        $news = $this->loadNewsBySearch();
+        $news = $this->loadNewsBySearch($query, Carbon::now()->format('Y-m-d'));
+        foreach ($news->articles as $article) {
+            $topic = NewsTopic::where('title', $article->topic)->first();
+            if ($topic == null) {
+                $topic = NewsTopic::create([
+                    'title' => $article->topic
+                ]);
+            }
+            NewsLetter::upsert([
+                'title' => $article->title,
+                'author' => $article->author,
+                'link' => $article->link,
+                'excerpt' => $article->excerpt,
+                'summary' => nl2br(htmlentities($article->summary)),
+                'rank' => $article->rank,
+                'news_topic_id' => $topic->id,
+                'query' => $query,
+                'country' => $article->country,
+                'language' => $article->language,
+                'media' => $article->media,
+                'created_at' => $article->published_date,
+            ], ['_id']);
+        }
     }
 
     public function loadNews()

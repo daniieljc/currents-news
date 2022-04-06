@@ -30,5 +30,6 @@ class ImportData extends Command
     {
         $news = new News();
         $news->importNews();
+        $news->importNewsWar("war");
     }
 }

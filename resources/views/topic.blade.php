@@ -38,7 +38,7 @@
                                 <div class="pl-6">
                                     <header>
                                         <h3 class="font-red-hat-display text-xl tracking-tighter mb-1">
-                                            <a href="#0">{{$new->title}}</a>
+                                            <a href="{{route('news', $new->id)}}">{{$new->title}}</a>
                                         </h3>
                                     </header>
                                     <p class="text-gray-600 dark:text-gray-400">
