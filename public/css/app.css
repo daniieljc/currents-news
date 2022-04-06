@@ -959,10 +959,6 @@ input[type=range]::-moz-focus-outer {
   margin-left: auto;
   margin-right: auto;
 }
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -987,12 +983,6 @@ input[type=range]::-moz-focus-outer {
 }
 .mt-3{
   margin-top: 0.75rem;
-}
-.mt-12{
-  margin-top: 3rem;
-}
-.mr-2{
-  margin-right: 0.5rem;
 }
 .mb-8{
   margin-bottom: 2rem;
@@ -1381,10 +1371,6 @@ input[type=range]::-moz-focus-outer {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-.px-1{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1404,6 +1390,10 @@ input[type=range]::-moz-focus-outer {
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .py-6{
   padding-top: 1.5rem;
@@ -1536,10 +1526,6 @@ input[type=range]::-moz-focus-outer {
   --tw-text-opacity: 1;
   color: rgb(110 110 118 / var(--tw-text-opacity));
 }
-.text-gray-400{
-  --tw-text-opacity: 1;
-  color: rgb(162 162 168 / var(--tw-text-opacity));
-}
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(29 29 32 / var(--tw-text-opacity));
@@ -1551,6 +1537,10 @@ input[type=range]::-moz-focus-outer {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(162 162 168 / var(--tw-text-opacity));
 }
 .text-indigo-600{
   --tw-text-opacity: 1;
@@ -2625,11 +2615,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   color: rgb(162 162 168 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(110 110 118 / var(--tw-text-opacity));
-}
-
 .dark .dark\:text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity));
@@ -2691,9 +2676,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   .sm\:flex{
     display: flex;
   }
-  .sm\:inline-flex{
-    display: inline-flex;
-  }
   .sm\:hidden{
     display: none;
   }
@@ -2711,9 +2693,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   }
   .sm\:justify-center{
     justify-content: center;
-  }
-  .sm\:justify-between{
-    justify-content: space-between;
   }
   .sm\:rounded-lg{
     border-radius: 0.5rem;

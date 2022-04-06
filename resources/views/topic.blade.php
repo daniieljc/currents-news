@@ -45,7 +45,7 @@
                                         {{$new->excerpt}}
                                     </p>
                                     <a class="inline-flex items-center font-medium text-teal-500 hover:underline mt-2"
-                                       href="#0">
+                                       href="{{route('news', $new->id)}}">
                                         <span>Leer Más</span>
                                         <svg class="w-3 h-3 flex-shrink-0 mt-px ml-2" viewBox="0 0 12 12"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -65,56 +65,6 @@
                             </div>
                         </article>
                     @endforeach
-
-                    <nav class="flex justify-center sm:justify-between mt-12">
-                    <span class="hidden sm:inline-flex items-center font-medium text-gray-400 dark:text-gray-500"
-                          href="#0">
-                        <svg class="w-3 h-3 flex-shrink-0 mt-px mr-2" viewBox="0 0 12 12"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path class="fill-current"
-                                  d="M5.091 11L0 5.909 5.091.818l.875.875-3.602 3.591h9.329v1.25H2.364l3.602 3.602z"/>
-                        </svg>
-                        <span>Previous</span>
-                    </span>
-                        <ul class="flex">
-                            <li class="mx-1">
-                                <a class="inline-flex text-teal-500 px-1 border-b border-teal-500 transition duration-150 ease-in-out"
-                                   href="#0">1</a>
-                            </li>
-                            <li class="mx-1">
-                                <a class="inline-flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 px-1 transition duration-150 ease-in-out"
-                                   href="#0">2</a>
-                            </li>
-                            <li class="mx-1">
-                                <a class="inline-flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 px-1 transition duration-150 ease-in-out"
-                                   href="#0">3</a>
-                            </li>
-                            <li class="mx-1">
-                                <span class="inline-flex text-gray-600 dark:text-gray-400" href="#0">…</span>
-                            </li>
-                            <li class="mx-1">
-                                <a class="inline-flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 px-1 transition duration-150 ease-in-out"
-                                   href="#0">7</a>
-                            </li>
-                            <li class="mx-1">
-                                <a class="inline-flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 px-1 transition duration-150 ease-in-out"
-                                   href="#0">8</a>
-                            </li>
-                            <li class="mx-1">
-                                <a class="inline-flex text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 px-1 transition duration-150 ease-in-out"
-                                   href="#0">9</a>
-                            </li>
-                        </ul>
-                        <a class="hidden sm:inline-flex items-center font-medium text-teal-500 hover:underline"
-                           href="#0">
-                            <span>Next</span>
-                            <svg class="w-3 h-3 flex-shrink-0 mt-px ml-2" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path class="fill-current"
-                                      d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z"/>
-                            </svg>
-                        </a>
-                    </nav>
                 </div>
             </div>
         </div>

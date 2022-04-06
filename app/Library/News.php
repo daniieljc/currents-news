@@ -30,7 +30,7 @@ class News
                 'author' => $article->author,
                 'link' => $article->link,
                 'excerpt' => $article->excerpt,
-                'summary' => $article->summary,
+                'summary' => nl2br(htmlentities($article->summary)),
                 'rank' => $article->rank,
                 'news_topic_id' => $topic->id,
                 'country' => $article->country,
